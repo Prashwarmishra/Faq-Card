@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Kumbh Sans", sans-serif;
+    overflow: hidden;
+}
+main{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    height: 65vh;
+    width: 65vw;
+    background-color: white;
+    border-radius: 1em;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.image-sec{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.image-sec img{
+    position: absolute;
+    z-index: 2;
+}
+.image-sec img:nth-of-type(1){
+    left: -4vw;
+    top: 5vh;
+    width: 30vw;
+}
+.image-sec img:nth-of-type(2){
+    position: fixed;
+    left: 10vw;
+    top: 38vh;
+    width: 15vw;
+}
+.image-sec img:nth-of-type(3){
+    position: absolute;
+    z-index: 1;
+    width: 50vw;
+    top: -30vh;
+    left: -24vw;
+}
+.detail-sec{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3vh 8vw 0 0;
+    overflow: scroll;
+}
+.detail-sec::-webkit-scrollbar {
+    display: none;
+}
+.section-heading{
+    margin: 6vh 0;
+    color: hsl(237, 12%, 33%);
+}
+.question{
+    border-bottom: 1px solid lightgrey;
+    transition: all 0.25s;
+    cursor: pointer;
+}
+.dropdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.67em 0;
+}
+.dropdown>span{
+    font-size: 0.9em;
+    color: hsl(237, 12%, 33%);
+}
+.dropdown>span>i{
+    color: darkorange;
+}
+.ans{
+    font-size: 0.7em;
+    display: none;
+}
+.ans>span{
+    line-height: 2;
+    color: hsl(240, 6%, 50%);
+}
+.block{
+    display: block;
+}
+.bold{
+    font-weight: bold;
+}
+@media screen and (max-width: 532px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 6fr;
+        height: 70vh;
+        width: 85vw;
+        top: 5%;
+        overflow: visible;
+    }
+    .image-sec{
+        height: auto;
+        width: auto;
+    }
+    .image-sec img:nth-of-type(1) {
+        left: 11%;
+        top: -17vh;
+        width: 65vw;
+    }
+    .image-sec img:nth-of-type(2) {
+        position: fixed;
+        left: 15vw;
+        top: 14vh;
+        width: 23vw;
+    }
+    .image-sec img:nth-of-type(3) {
+        position: absolute;
+        z-index: 1;
+        width: 75%;
+        top: -20vh;
+        left: 8vw;
+    }
+    .detail-sec{
+        padding: 1vh 10vw;
+    }
+}
